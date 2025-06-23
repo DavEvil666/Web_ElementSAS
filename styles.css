@@ -1,0 +1,213 @@
+/* Estilos base */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    background-color: #111;
+}
+
+nav ul li a:hover {
+    background-color: #222;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+    padding: 0;
+}
+
+nav ul li:hover > .submenu,
+nav ul li .submenu:hover {
+    display: flex;
+}
+
+nav ul .submenu li {
+    position: relative;
+}
+
+nav ul .submenu li .submenu {
+    left: 100%;
+    top: 0;
+}
+
+.hero {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #161616;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.btn {
+    background: #00c853;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.productos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 45%;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #00c853;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* === Catálogo de productos detallado (tipo tarjeta) === */
+
+.catalogo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.producto-card {
+    background-color: #f5f5f5;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: scale(1.03);
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: navy;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.tallas {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.tallas button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.tallas button:hover {
+    background-color: #ddd;
+}
+
+.producto-card h3 {
+    font-size: 1.1rem;
+    margin: 8px 0 4px;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004aad;
+}
