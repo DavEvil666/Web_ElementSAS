@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Element SAS</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section id="registro">
+        <div class="login-container">
+            <h2>Registro</h2>
+            <form onsubmit="return validarFormulario();">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" id="email-registro" placeholder="Correo electrónico" required>
+                <input type="password" id="password-registro" placeholder="Contraseña" required>
+                <input type="password" id="confirmar" placeholder="Confirmar contraseña" required>
+                <button type="submit">Registrarse</button>
+                <a class="link" href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
+            </form>
+        </div>
+    </section>
+</body>
+<footer>
+    <p>&copy; 2025 Element SAS - Todos los derechos reservados</p>
+</footer>
+</html>

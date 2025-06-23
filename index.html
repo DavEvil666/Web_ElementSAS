@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Element SAS - Ropa Deportiva</title>
-    <link rel="stylesheet" href="styles.css"
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
@@ -22,26 +21,26 @@
                             <li class="dropdown">
                                 <a href="#detalle-productos">Hombre</a>
                                 <ul class="submenu">
-                                    <li><a href="#">Camisetas</a></li>
-                                    <li><a href="#">Pantalonetas</a></li>
-                                    <li><a href="#">Pantalones</a></li>
-                                    <li><a href="#">Zapatillas</a></li>
+                                    <li><a href="#camisetas-hombre">Camisetas</a></li>
+                                    <li><a href="#pantalonetas-hombre">Pantalonetas</a></li>
+                                    <li><a href="#pantalones-hombre">Pantalones</a></li>
+                                    <li><a href="#zapatillas-hombre">Zapatillas</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#detalle-productos-mujer">Mujer</a>
                                 <ul class="submenu">
-                                    <li><a href="#">Camisetas</a></li>
-                                    <li><a href="#">Tops</a></li>
-                                    <li><a href="#">Faldas</a></li>
-                                    <li><a href="#">Licras</a></li>
-                                    <li><a href="#">Zapatillas</a></li>
+                                    <li><a href="#camisetas-mujer">Camisetas</a></li>
+                                    <li><a href="#tops-mujer">Tops</a></li>
+                                    <li><a href="#faldas-mujer">Faldas</a></li>
+                                    <li><a href="#licras-mujer">Licras</a></li>
+                                    <li><a href="#zapatillas-mujer">Zapatillas</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contacto">Contáctanos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
@@ -56,7 +55,7 @@
 
     <section id="detalle-productos">
   <div class="container">
-    <h2>Camisetas Hombre</h2>
+    <h2 id="camisetas-hombre">Camisetas Hombre</h2>
     <div class="catalogo">
       <div class="producto-card">
         <div class="etiqueta-nuevo">nuevo</div>
@@ -113,7 +112,7 @@
       </div>
     </div>
 
-    <h2>Pantalonetas Hombre</h2>
+    <h2 id="pantalonetas-hombre">Pantalonetas Hombre</h2>
     <div class="catalogo">
       <div class="producto-card">
         <div class="etiqueta-nuevo">nuevo</div>
@@ -170,7 +169,7 @@
       </div>
     </div>
 
-    <h2>Pantalones Hombre</h2>
+    <h2 id="pantalones-hombre">Pantalones Hombre</h2>
     <div class="catalogo">
       <div class="producto-card">
         <div class="etiqueta-nuevo">nuevo</div>
@@ -227,7 +226,7 @@
       </div>
     </div>
 
-    <h2>Zapatillas Hombre</h2>
+    <h2 id="zapatillas-hombre">Zapatillas Hombre</h2>
     <div class="catalogo">
       <div class="producto-card">
         <div class="etiqueta-nuevo">nuevo</div>
@@ -457,7 +456,7 @@
     </div>
       
     
-    <h2>Licras Mujer</h2>
+    <h2 id="licras-mujer">Licras Mujer</h2>
     <div class="catalogo">
       <div class="producto-card">
         <div class="etiqueta-nuevo">nuevo</div>
@@ -514,7 +513,7 @@
       </div>
     </div>
 
-    <h2>Zapatillas Mujer</h2>
+    <h2 id="zapatillas-mujer">Zapatillas Mujer</h2>
    <div class="catalogo">
       <div class="producto-card">
         <div class="etiqueta-nuevo">nuevo</div>
@@ -572,30 +571,295 @@
   </div>
 </section>
 
-
-    <section id="detalle-productos-mujer">...</section>
-
-    <section id="blog">
-        <div class="container">
-            <h2>Blog</h2>
-            <article>
-                <h3>5 consejos para mejorar tu rendimiento</h3>
-                <p>Descubre cómo optimizar tus entrenamientos y cuidar tu cuerpo.</p>
-            </article>
+<section id="detalle-productos-mujer">
+  <div class="container">
+    <h2 id="camisetas-mujer">Camisetas Mujer</h2>
+    <div class="catalogo">
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/camisetam1.jpg" alt="Camiseta Puma">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
         </div>
-    </section>
-
-    <section id="contacto">
-        <div class="container">
-            <h2>Contáctanos</h2>
-            <form>
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Correo">
-                <textarea placeholder="Mensaje"></textarea>
-                <button>Enviar</button>
-            </form>
+        <h3>Camiseta Puma</h3>
+        <p class="precio">$78.950</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
         </div>
-    </section>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/camisetam2.jpg" alt="Camiseta Adidas">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Camiseta Adidas</h3>
+        <p class="precio">$100.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/camisetam3.jpg" alt="Camiseta Nike Pro Girl">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button>
+        </div>
+        <h3>Camiseta Nike Pro Girl</h3>
+        <p class="precio">$78.500</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="tops-mujer">Tops Mujer</h2>
+    <div class="catalogo">
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/top1.jpg" alt="Top Puma">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Top Puma</h3>
+        <p class="precio">$88.950</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Top2.jpg" alt="Top Adidas">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Top Adidas</h3>
+        <p class="precio">$120.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Top3.jpg" alt="Top Nike Pro Girl">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button>
+        </div>
+        <h3>Top Pro Girl</h3>
+        <p class="precio">$200.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="faldas-mujer">Faldas Mujer</h2>
+    <div class="catalogo">
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Falda1.jpg" alt="Falda Puma">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Falda Puma</h3>
+        <p class="precio">$98.950</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Falda2.jpg" alt="Falda Adidas">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Falda Adidas</h3>
+        <p class="precio">$150.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Falda3.jpg" alt="Falda Nike Pro Girl">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button>
+        </div>
+        <h3>Falda Nike Pro Girl</h3>
+        <p class="precio">$200.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+    </div>
+      
+    
+    <h2 id="licras-mujer">Licras Mujer</h2>
+    <div class="catalogo">
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Licra1.jpg" alt="Licra Puma">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Licra Puma</h3>
+        <p class="precio">$98.999</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Licra2.jpg" alt="Licra Adidas">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button></button>
+        </div>
+        <h3>Licra Adidas</h3>
+        <p class="precio">$150.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+        <img src="img/Licra3.jpg" alt="Licra Nike Pro Girl">
+        <div class="tallas">
+          <button>S</button><button>M</button><button>L</button>
+        </div>
+        <h3>Liocra Nike Pro Girl</h3>
+        <p class="precio">250.000</p>
+        <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="zapatillas-mujer">Zapatillas Mujer</h2>
+   <div class="catalogo">
+      <div class="producto-card">
+        <div class="etiqueta-nuevo">nuevo</div>
+         <img src="img/zapatillam1.jpg" alt="Zapatillas Nike Zoom">
+         <div class="tallas">
+          <button>35</button><button>36</button><button>37</button><button>38</button>
+         </div>
+         <h3>Zapatillas Nike Zoom</h3>
+         <p class="precio">$250.000</p>
+         <div class="carrito-opciones">
+          <div class="cantidad-control">
+            <button onclick="restarCantidad(this)">-</button>
+            <span class="cantidad">1</span>
+            <button onclick="sumarCantidad(this)">+</button>
+          </div>
+          <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+     <div class="etiqueta-nuevo">nuevo</div>
+     <img src="img/zapatillam2.jpg" alt="Zapatillas Adidas Ultraboost">
+     <div class="tallas">
+      <button>35</button><button>36</button><button>37</button><button>38</button>
+     </div>
+     <h3>Zapatillas Adidas Ultraboost</h3>
+     <p class="precio">$280.000</p>
+     <div class="carrito-opciones">
+     <div class="cantidad-control">
+      <button onclick="restarCantidad(this)">-</button>
+      <span class="cantidad">1</span>
+      <button onclick="sumarCantidad(this)">+</button>
+    </div>
+    <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+  </div>
+</div>
+<div class="producto-card">
+  <div class="etiqueta-nuevo">nuevo</div>
+  <img src="img/zapatilla3.jpg" alt="Zapatillas Reebok Runner">
+  <div class="tallas">
+    <button>35</button><button>36</button><button>37</button><button>38</button>
+  </div>
+  <h3>Zapatillas Reebok Runner</h3>
+  <p class="precio">$250.000</p>
+  <div class="carrito-opciones">
+    <div class="cantidad-control">
+      <button onclick="restarCantidad(this)">-</button>
+      <span class="cantidad">1</span>
+      <button onclick="sumarCantidad(this)">+</button>
+    </div>
+    <button class="carrito-icono" onclick="añadirAlCarrito(this)">🛒 Añadir</button>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
 
     <footer>
         <p>&copy; 2025 Element SAS - Todos los derechos reservados</p>
