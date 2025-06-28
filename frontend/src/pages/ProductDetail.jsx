@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import './ProductDetail.css'
+import apiService from '../services/api'
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -9,23 +10,20 @@ const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState('')
   const [quantity, setQuantity] = useState(1)
 
-  // Mock data
-  const mockProducts = [
-    { id: 1, name: 'Camiseta Puma Elite', description: 'Diseñada para máxima transpirabilidad y confort durante tus entrenamientos más intensos.', price: 478950, image_url: '/img/camiseta1.jpg', category_id: 3, is_new: true },
-    { id: 2, name: 'Camiseta Adidas Fit', description: 'Corte clásico y tejido suave que te mantiene seco y cómodo en todo momento.', price: 120000, image_url: '/img/camiseta2.jpg', category_id: 3, is_new: false },
-    { id: 13, name: 'Camiseta Puma', description: 'Un básico elegante y funcional que se adapta a cualquier rutina de ejercicio.', price: 78950, image_url: '/img/camisetam1.jpg', category_id: 7, is_new: false },
-    { id: 25, name: 'Zapatillas Nike Zoom', description: 'Ligeras y rápidas, diseñadas para ayudarte a romper tus marcas personales.', price: 250000, image_url: '/img/zapatillam1.jpg', category_id: 11, is_new: true }
-  ]
-
   useEffect(() => {
-    setLoading(true)
-    
-    // Simulate API call
-    setTimeout(() => {
-      const foundProduct = mockProducts.find(p => p.id === parseInt(id))
-      setProduct(foundProduct)
-      setLoading(false)
-    }, 500)
+    const fetchProduct = async () => {
+      setLoading(true)
+      try {
+        const data = await apiService.getProduct(id)
+        setProduct(data)
+      } catch (error) {
+        console.error('Error fetching product details:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProduct()
   }, [id])
 
   const formatPrice = (price) => {
