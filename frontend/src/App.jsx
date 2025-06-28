@@ -6,6 +6,9 @@ import ProductList from './pages/ProductList'
 import ProductDetail from './pages/ProductDetail'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Contact from './pages/Contact'
+import Faq from './pages/Faq'
+import Returns from './pages/Returns'
 import './App.css'
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
             <Route path="/category/:categoryId" element={<ProductList />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/returns" element={<Returns />} />
           </Routes>
         </main>
         <Footer />
