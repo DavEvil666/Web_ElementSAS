@@ -195,6 +195,15 @@
   background-color: #0056b3;
 }
 
+.add-to-cart-btn.added {
+  background-color: #28a745;
+  cursor: not-allowed;
+}
+
+.add-to-cart-btn.added:hover {
+  background-color: #218838;
+}
+
 /* Product Features */
 .product-features {
   margin-bottom: 2rem;

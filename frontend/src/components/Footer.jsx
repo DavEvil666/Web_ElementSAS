@@ -24,6 +24,7 @@ const Footer = () => {
             <li><a href="/contact">Contacto</a></li>
             <li><a href="/faq">Preguntas Frecuentes</a></li>
             <li><a href="/returns">Devoluciones</a></li>
+            <li><a href="/terms">Términos y Condiciones</a></li>
           </ul>
         </div>
         
@@ -39,6 +40,7 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <p>&copy; 2025 Element SAS. Todos los derechos reservados.</p>
+        <a href="/terms">Términos y Condiciones</a>
       </div>
     </footer>
   )

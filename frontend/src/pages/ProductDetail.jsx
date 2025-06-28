@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 import './ProductDetail.css'
 import apiService from '../services/api'
 
@@ -9,6 +10,8 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true)
   const [selectedSize, setSelectedSize] = useState('')
   const [quantity, setQuantity] = useState(1)
+  const [addedToCart, setAddedToCart] = useState(false)
+  const { addToCart } = useCart()
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -25,6 +28,13 @@ const ProductDetail = () => {
 
     fetchProduct()
   }, [id])
+
+  useEffect(() => {
+    if (addedToCart) {
+      const timer = setTimeout(() => setAddedToCart(false), 2000)
+      return () => clearTimeout(timer)
+    }
+  }, [addedToCart])
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-CO', {
@@ -47,9 +57,8 @@ const ProductDetail = () => {
       alert('Por favor selecciona una talla')
       return
     }
-    
-    // Here you would typically add to cart logic
-    alert(`Agregado al carrito: ${product.name} - Talla: ${selectedSize} - Cantidad: ${quantity}`)
+    addToCart(product, selectedSize, quantity)
+    setAddedToCart(true)
   }
 
   if (loading) {
@@ -152,10 +161,11 @@ const ProductDetail = () => {
 
             {/* Add to Cart */}
             <button 
-              className="add-to-cart-btn"
+              className={`add-to-cart-btn ${addedToCart ? 'added' : ''}`}
               onClick={handleAddToCart}
+              disabled={addedToCart}
             >
-              Agregar al Carrito
+              {addedToCart ? 'Agregado!' : 'Agregar al Carrito'}
             </button>
 
             {/* Product Features */}

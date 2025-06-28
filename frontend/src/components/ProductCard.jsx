@@ -1,13 +1,21 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './ProductCard.css'
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate()
+
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-CO', {
       style: 'currency',
       currency: 'COP',
       minimumFractionDigits: 0
     }).format(price)
+  }
+
+  const handleAddToCartClick = (e) => {
+    e.preventDefault() // Prevent link navigation
+    e.stopPropagation() // Stop event bubbling
+    navigate(`/products/${product.id}`)
   }
 
   return (
@@ -33,8 +41,8 @@ const ProductCard = ({ product }) => {
         </div>
       </Link>
       
-      <button className="add-to-cart-btn">
-        Agregar al Carrito
+      <button className="add-to-cart-btn" onClick={handleAddToCartClick}>
+        Seleccionar Talla
       </button>
     </div>
   )

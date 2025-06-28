@@ -1,10 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { FaShoppingCart } from 'react-icons/fa'
+import { useCart } from '../context/CartContext'
 import './Header.css'
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const navigate = useNavigate()
+  const { cartCount } = useCart()
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -42,6 +45,10 @@ const Header = () => {
         <div className="auth-links">
           <Link to="/login" className="auth-link">Iniciar Sesión</Link>
           <Link to="/register" className="auth-link">Registrarse</Link>
+          <Link to="/cart" className="cart-link">
+            <FaShoppingCart />
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+          </Link>
         </div>
       </div>
     </header>
