@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Register.css'
+import apiService from '../services/api'
 
 const Register = () => {
   const navigate = useNavigate()
@@ -68,16 +69,8 @@ const Register = () => {
     setLoading(true)
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      // Mock successful registration
-      console.log('Registration successful:', formData)
-      
-      // Here you would typically:
-      // 1. Make API call to register user
-      // 2. Handle response (success/error)
-      // 3. Redirect user or show success message
+      const response = await apiService.register(formData)
+      console.log('Registration successful:', response)
       
       alert('¡Registro exitoso! Ahora puedes iniciar sesión.')
       navigate('/login')

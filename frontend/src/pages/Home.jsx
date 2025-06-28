@@ -2,54 +2,23 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 import './Home.css'
+import apiService from '../services/api'
 
 const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate API call for featured products
-    const fetchFeaturedProducts = () => {
-      // Mock data based on your database schema
-      const mockProducts = [
-        {
-          id: 1,
-          name: 'Camiseta Puma Elite',
-          description: 'Diseñada para máxima transpirabilidad y confort durante tus entrenamientos más intensos.',
-          price: 478950,
-          image_url: '/img/camiseta1.jpg',
-          is_new: true
-        },
-        {
-          id: 13,
-          name: 'Zapatillas Nike Zoom',
-          description: 'Ligeras y rápidas, diseñadas para ayudarte a romper tus marcas personales.',
-          price: 250000,
-          image_url: '/img/zapatillam1.jpg',
-          is_new: true
-        },
-        {
-          id: 16,
-          name: 'Top Adidas',
-          description: 'Máxima sujeción y transpirabilidad para tus actividades de alto impacto.',
-          price: 120000,
-          image_url: '/img/Top2.jpg',
-          is_new: false
-        },
-        {
-          id: 10,
-          name: 'Zapatillas Nike Zoom',
-          description: 'Amortiguación reactiva que te impulsa hacia adelante en cada zancada.',
-          price: 299000,
-          image_url: '/img/zapatilla1.jpg',
-          is_new: false
-        }
-      ]
-      
-      setTimeout(() => {
-        setFeaturedProducts(mockProducts)
+    const fetchFeaturedProducts = async () => {
+      setLoading(true)
+      try {
+        const products = await apiService.getFeaturedProducts(4)
+        setFeaturedProducts(products)
+      } catch (error) {
+        console.error('Error fetching featured products:', error)
+      } finally {
         setLoading(false)
-      }, 1000)
+      }
     }
 
     fetchFeaturedProducts()

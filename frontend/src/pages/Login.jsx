@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
+import apiService from '../services/api'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -54,23 +55,20 @@ const Login = () => {
     setLoading(true)
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // Mock successful login
-      console.log('Login successful:', formData)
+      const response = await apiService.login(formData)
+      console.log('Login successful:', response)
       
       // Here you would typically:
-      // 1. Make API call to authenticate user
-      // 2. Store auth token in localStorage/context
-      // 3. Redirect user
+      // 1. Store auth token in localStorage/context
+      localStorage.setItem('token', response.token)
+      localStorage.setItem('user', JSON.stringify(response.user))
       
       alert('¡Inicio de sesión exitoso!')
       navigate('/')
       
     } catch (error) {
       console.error('Login error:', error)
-      setErrors({ general: 'Error al iniciar sesión. Intenta nuevamente.' })
+      setErrors({ general: 'Error al iniciar sesión. Verifica tus credenciales.' })
     } finally {
       setLoading(false)
     }
