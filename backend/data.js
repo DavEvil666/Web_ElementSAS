@@ -25,7 +25,7 @@ const mockProducts = [
     { id: 24, name: 'Licra Nike Pro Girl', description: 'Siente la sujeción y la confianza en cada movimiento con esta licra de alto rendimiento.', price: 250000, image_url: '/img/Licra3.jpg', category_id: 10, is_new: false },
     { id: 25, name: 'Zapatillas Nike Zoom', description: 'Ligeras y rápidas, diseñadas para ayudarte a romper tus marcas personales.', price: 250000, image_url: '/img/zapatillam1.jpg', category_id: 11, is_new: true },
     { id: 26, name: 'Zapatillas Adidas Ultraboost', description: 'La combinación perfecta de amortiguación, respuesta y estilo para tus carreras.', price: 280000, image_url: '/img/zapatillam2.jpg', category_id: 11, is_new: false },
-    { id: 27, name: 'Zapatillas Reebok Runner', description: 'Una zapatilla versátil y fiable para tus entrenamientos y carreras diarias.', price: 250000, image_url: '/img/zapatilla3.jpg', category_id: 11, is_new: false }
+    { id: 27, name: 'Zapatillas Reebok Runner', description: 'Una zapatilla versátil y fiable para tus entrenamientos y carreras diarias.', price: 250000, image_url: '/img/zapatillam3.jpg', category_id: 11, is_new: false }
   ];
   
   const mockCategories = [
